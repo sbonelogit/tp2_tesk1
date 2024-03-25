@@ -1,5 +1,18 @@
-{
-    "cSpell.words": [
-        "politicail"
-    ]
-}
+#2.1
+def register_party(parties_list, new_party):
+    
+    if new_party["member_count"] >=10000 :
+        parties_list.append(new_party)
+        print(f"Party '{new_party['party_name']}' registered successfully!")
+    else:
+        print("Sorry, the party does not have the minimum required members for registration.")
+
+
+parties = [
+    {"party_name": "PartyA", "reg_number": 1, "member_count": 60},
+    {"party_name": "PartyB", "reg_number": 2, "member_count": 45}
+]
+
+new_party = {"party_name": "PartyC", "reg_number": 3, "member_count": 55}
+
+register_party(parties, new_party)
